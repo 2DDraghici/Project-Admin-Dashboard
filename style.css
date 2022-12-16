@@ -39,9 +39,10 @@ svg
 {
     grid-column: 2;
     grid-row: 1;
-    background-color : whitesmoke;
+    background-color : rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     padding-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .user_stuff
 {
@@ -58,17 +59,24 @@ svg
     height: 80%;
 }
 .content
-{   grid-column: 2;
-    grid-row: auto;
+{   
+    grid-column: 2;
+    grid-row: 2;
     display: grid;
     grid-template-columns: 4fr 1.3fr;
+    grid-template-rows: 1fr;
     background-color: #e4e4e7;
     padding-bottom: 50px;
     
 }
 .projects
 {   grid-column: 1;
-    grid-row: 1/3;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     
 }
 .card_container
@@ -79,12 +87,12 @@ svg
 }
 .project_announcements 
 {   
-    grid-row: 1;
+    
     grid-column: 2;
 }
  .project_trending
  {
-    grid-row: 2;
+    
     grid-column: 2;
  }
  .search_bar
@@ -123,6 +131,11 @@ svg
  .admin_projects button
  {
     height: 40px;
+    width: 20%;
+    border-radius: 1ch;
+    border: none;
+    background-color: #0284c7;
+    color: white;
  }
  .buttons
 {
@@ -140,11 +153,11 @@ svg
     flex-direction: column;
     width: 80%;
     margin-left: 20px;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     border-radius: 1ch;
     border-left: solid #f97316 6px;
     padding:  1px 15px;
-    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .card p
 {
@@ -153,5 +166,75 @@ svg
 }
 .card h4
 {
+    font-family:  'Open Sans', sans-serif;
+}
+.projects h3
+{
+    align-self: flex-start;
+    margin-left: 20px;
+}
+h3
+{
+    font-family:  'Open Sans', sans-serif;
+}
+/*  announcemnt css*/
+.project_announcemnets
+{
 
 }
+
+.announcemnets_box
+{
+    background-color: white;
+    border-radius: 1ch;
+    padding: 10px;
+    margin-right: 30px;
+}
+.announcement_card
+{
+    border-bottom: solid gray 0.5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: auto;
+}
+.announcement_card h4,p
+{
+    margin: 5px;
+}
+#last_announcement
+{
+    border-bottom: none;
+}
+/* User stuff */
+.admin_user
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+.admin_user img
+{
+    height: 40px;
+    grid-column: 1;
+    grid-row: 1/3;
+}
+.admin_user p
+{
+    grid: 2 1;
+    font-family:  'Open Sans', sans-serif;
+    margin: 0;
+
+}
+.admin_user h3
+{
+    grid: 2 2;
+    margin: 0;
+}
+
